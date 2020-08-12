@@ -1,0 +1,18 @@
+{
+  "name": "leaflet-examples",
+  "version": "0.0.0",
+  "description": "Integrating Jawg Maps with Leaflet",
+  "dependencies": {},
+  "devDependencies": {
+    "js-beautify": "^1.11.0"
+  },
+  "scripts": {
+    "format": "js-beautify --config .jsbeautifyrc -f examples/* -r"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leaflet-examples.git"
+  },
+  "author": "Jawg Maps <contact@jawg.io> (https://jawg.io)",
+  "license": "MIT"
+}

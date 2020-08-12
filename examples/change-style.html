@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      min-height: 500px;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token ! 
+    const accessToken = '<YOUR_ACCESS_TOKEN>';
+    const map = L.map('map').setView([48.7965913, 2.3210938], 3);
+
+    // List of all our defaults styles names
+    const styles = ['jawg-streets', 'jawg-sunny', 'jawg-terrain', 'jawg-dark', 'jawg-light'];
+    const baselayers = {};
+    // Creating one tile layers for each style
+    styles.forEach((style) =>
+      baselayers[style] = L.tileLayer(
+        `https://tile.jawg.io/${style}/{z}/{x}/{y}.png?access-token=${accessToken}`, {
+          attribution: '<a href="https://www.jawg.io" target="_blank">&copy; Jawg</a> | <a href="https://www.openstreetmap.org" target="_blank">&copy; OpenStreetMap</a>&nbsp;contributors',
+        }
+      )
+    );
+
+    // Set the default layer when you open the map
+    baselayers['jawg-streets'].addTo(map);
+    // Associating each style name to its tile layer
+    L.control.layers(baselayers).addTo(map);
+  </script>
+</body>
+</html>
