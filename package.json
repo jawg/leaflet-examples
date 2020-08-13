@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leaflet-examples.git"
+    "url": "https://github.com/jawg/leaflet-examples.git"
   },
   "author": "Jawg Maps <contact@jawg.io> (https://jawg.io)",
   "license": "MIT"

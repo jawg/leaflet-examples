@@ -23,8 +23,8 @@
     const map = L.map('map').setView([48.852966, 2.349902], 12);
     L.tileLayer(
       `https://tile.jawg.io/jawg-terrain/{z}/{x}/{y}.png?access-token=${accessToken}`, {
-        attribution: '<a href="https://www.jawg.io" target="_blank">&copy; Jawg</a> | <a href="https://www.openstreetmap.org" target="_blank">&copy; OpenStreetMap</a>&nbsp;contributors',
-        maxZoom: 22,
+        attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib">&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib">&copy; OSM contributors</a>',
+        maxZoom: 22
       }
     ).addTo(map);
 
@@ -34,7 +34,7 @@
     L.marker([48.858093, 2.294694], {
       icon: L.icon({
         iconUrl: 'https://www.jawg.io/docs/images/icons/eiffel-tower.png',
-        iconSize: [50, 50],
+        iconSize: [50, 50]
       })
     }).addTo(map);
   </script>
