@@ -3,9 +3,11 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
   <style>
+    html,
     body {
       margin: 0;
       padding: 0;
+      height: 100%;
     }
     #map {
       min-height: 500px;
@@ -17,11 +19,14 @@
 <body>
   <div id="map"></div>
   <script>
-    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token!
+    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token !
     const accessToken = '<YOUR_ACCESS_TOKEN>';
+    // This is the client identifier. Tile requests origin will appear as "www.acme.com|client1" in the lab statistics tab (https://www.jawg.io/lab/stats)
+    const myClientId = 'client1';
     const map = L.map('map').setView([48.7965913, 2.3210938], 3);
     L.tileLayer(
-      `https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=${accessToken}`, {
+      // Add the origin query param with the client id value to the tile URL
+      `https://tile.jawg.io/jawg-streets/{z}/{x}/{y}.png?access-token=${accessToken}&origin=${myClientId}`, {
         attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib">&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib">&copy; OSM contributors</a>',
         maxZoom: 22
       }

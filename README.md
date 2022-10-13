@@ -1,11 +1,11 @@
-# Integrating Jawg Maps with Leaflet : Examples
+# Integrating Jawg Maps with Leaflet: Examples
 
 Welcome to our example repository to integrate Jawg with Leaflet.
 
 Don't forget to set your access token before openning any example.
 If you don't have any access token yet, get one on [Jawg Lab](https://jawg.io/lab).
 
-## Examples description :
+## Examples description:
 
 [simple-map](./examples/simple-map.html): Displaying a simple dynamic map.
 
@@ -26,3 +26,5 @@ If you don't have any access token yet, get one on [Jawg Lab](https://jawg.io/la
 > If you don't have any style ID yet, go to [Jawg Lab](https://jawg.io/lab/styles) to create one or read the [documentation](https://jawg.io/docs/maps#get-custom-style-id) for more informations.
 
 [maplibre-gl-leaflet](./examples/maplibre-gl-leaflet.html): Use vector tiles with [maplibre-gl-leaflet](https://github.com/maplibre/maplibre-gl-leaflet).
+
+[add-origin-info](./examples/add-origin-info.html): Customize the request origin to add additional information.

@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
   <!-- Add maplibre-gl-js -->
-  <link href='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css' rel='stylesheet' />
-  <script src='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js'></script>
+  <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
+  <script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
   <!-- Add maplibre-gl-leaflet -->
   <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.17/leaflet-maplibre-gl.js"></script>
   <style>
@@ -24,7 +24,7 @@
 <body>
   <div id="map"></div>
   <script>
-    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token ! 
+    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token!
     const accessToken = '<YOUR_ACCESS_TOKEN>';
     const map = L.map('map', {
       maxZoom: 22
