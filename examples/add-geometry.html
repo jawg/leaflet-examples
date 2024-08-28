@@ -17,12 +17,12 @@
 <body>
   <div id="map"></div>
   <script>
-    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token ! 
+    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your own access token
     const accessToken = '<YOUR_ACCESS_TOKEN>';
     const map = L.map('map').setView([48.8534, 2.3488], 11);
     L.tileLayer(
       `https://tile.jawg.io/jawg-dark/{z}/{x}/{y}.png?access-token=${accessToken}`, {
-        attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib">&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib">&copy; OSM contributors</a>',
+        attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib">&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib">&copy; OSM contributors</a>',
         maxZoom: 22
       }
     ).addTo(map);

@@ -19,7 +19,7 @@
 <body>
   <div id="map"></div>
   <script>
-    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your real access token !
+    // Don't forget to replace <YOUR_ACCESS_TOKEN> by your own access token
     const accessToken = '<YOUR_ACCESS_TOKEN>';
     // This is the client identifier. Tile requests origin will appear as "www.acme.com|client1" in the lab statistics tab (https://www.jawg.io/lab/stats)
     const myClientId = 'client1';
@@ -27,7 +27,7 @@
     L.tileLayer(
       // Add the origin query param with the client id value to the tile URL
       `https://tile.jawg.io/jawg-streets/{z}/{x}/{y}.png?access-token=${accessToken}&origin=${myClientId}`, {
-        attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib">&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib">&copy; OSM contributors</a>',
+        attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib">&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib">&copy; OSM contributors</a>',
         maxZoom: 22
       }
     ).addTo(map);
